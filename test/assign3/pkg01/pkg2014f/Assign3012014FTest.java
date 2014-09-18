@@ -245,14 +245,15 @@ public class Assign3012014FTest {
         byte[] fakeInputArray = fakeInput.getBytes();
         System.setIn(new ByteArrayInputStream(fakeInputArray));
         
-        String expected = "$139.50";
+        String[] expected = {"$16.05", "$139.50"};
         
         Assign3012014F.doExercise3();
 
         String actual = outContent.toString();
 
-        assertTrue("Checking if \"" + actual + "\" contains: \"" + expected + "\"",
-                actual.contains(expected));
+        for (String e : expected)
+        assertTrue("Checking if \"" + actual + "\" contains: \"" + e + "\"",
+                actual.contains(e));
     }
 
 }

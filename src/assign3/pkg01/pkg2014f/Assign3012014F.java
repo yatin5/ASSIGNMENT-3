@@ -62,7 +62,7 @@ public class Assign3012014F {
      * 3. If the number is greater than or equal to one, and the number is
      *      less than or equal to 26, continue the program. Otherwise, 
      *      output "Please pick a number between 1-26." and end the program.
-     * 4. Create two new character variables called lowerNum and upperNum.
+     * 4. Create two new integer variables called lowerNum and upperNum.
      * 5. Give lowerNum the value of (number + 'a' - 1).
      * 6. Give upperNum the value of (number + 'A' - 1).
      * 7. If lowerNum equals letter, or upperNum equals letter, then output
