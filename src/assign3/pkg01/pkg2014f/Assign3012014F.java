@@ -1,5 +1,6 @@
 package assign3.pkg01.pkg2014f;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -52,8 +53,32 @@ public class Assign3012014F {
      */
     public static void doExercise1() {
         // TODO: Complete Exercise #1 Below
+         Scanner in=new Scanner(System.in);
+        
+        
+        System.out.println("enter a number between one and ten");
+        int number=in.nextInt();
+        if(number>10)
+        {
+            System.out.println("That's too high!");
+            
+        }
+        else if(number<1)
+                {
+                   System.out.println("That's too low!"); 
+                }
+        else if(number==7)
+        {
+            System.out.println("Lucky number seven!");
+        }
+        else
+        {
+            System.out.println("Thank you!");
+        }
         
     }
+        
+    
 
     /* Exercise #2 - Nested Logic
      *
@@ -70,7 +95,34 @@ public class Assign3012014F {
      */
     public static void doExercise2() {
         // TODO: Complete Exercise #2 Below
+        Scanner in=new Scanner(System.in);
+        System.out.println("enter a letter");
+        char letter=in.next().charAt(0);
         
+        
+        System.out.println("enter a number");
+        int num=in.nextInt();
+        if(num>=1 && num<=26)
+        {
+            
+           
+           int lowerNum=num+'a'-1;
+           int upperNum=num+'A'-1;
+            
+           if(lowerNum==letter || upperNum==letter)
+            {
+               
+                System.out.println("That's the right number/letter.");
+            }
+            else
+            {
+                System.out.println("Try again.");
+            }
+        }
+        else
+        {
+            System.out.println("Please pick a number between 1-26.");
+        }
     }
 
     /* Exercise #3 - Output Formatting
@@ -85,8 +137,14 @@ public class Assign3012014F {
      */
     public static void doExercise3() {
         // TODO: Complete Exercise #3 Below
-        
+         Scanner in=new Scanner(System.in);
+        System.out.println("please enter the price:");
+        double price=in.nextDouble();
+        double tax=price*.13;
+        double total=price+tax;
+        DecimalFormat dec= new DecimalFormat("#.00");
+   
+     System.out.println("taxes: $" +dec.format(tax)+ "Total: $" +dec.format(total));
+     
     }
-    
-    
 }
